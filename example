@@ -1,0 +1,105 @@
+import { Group } from "@visx/group";
+import { scaleLinear } from "@visx/scale";
+import { AxisLeft, AxisBottom } from "@visx/axis";
+import genRandomNormalPoints, {
+  PointsRange,
+} from "@visx/mock-data/lib/generators/genRandomNormalPoints";
+import { max, min } from "@visx/vendor/d3-array";
+import { Circle } from "@visx/shape";
+import { Zoom } from "@visx/zoom";
+import { RectClipPath } from "@visx/clip-path";
+
+const rescaleX = (scale, zoom) => {
+  const newXDomain = scale
+    .range()
+    .map((r) =>
+      scale.invert(
+        (r - zoom.transformMatrix.translateX) / zoom.transformMatrix.scaleX
+      )
+    );
+  return scale.copy().domain(newXDomain);
+};
+
+const rescaleY = (scale, zoom) => {
+  const newXDomain = scale
+    .range()
+    .map((r) =>
+      scale.invert(
+        (r - zoom.transformMatrix.translateY) / zoom.transformMatrix.scaleY
+      )
+    );
+  return scale.copy().domain(newXDomain);
+};
+
+const data: PointsRange[] = genRandomNormalPoints(100, 2.5);
+
+const xAccessor = (d: PointsRange) => d[0];
+const yAccessor = (d: PointsRange) => d[1];
+
+type ScatterChartProps = {
+  width: number;
+  height: number;
+  margin: { top: number; bottom: number; left: number; right: number };
+};
+
+const ScatterChart = ({ width, height, margin }: ScatterChartProps) => {
+  const innerWidth = width - margin.left - margin.right;
+  const innerHeight = height - margin.top - margin.bottom;
+
+  const xScale = scaleLinear<number>({
+    domain: [min(data.map(xAccessor)) || 0, max(data.map(xAccessor)) || 0],
+    range: [0, innerWidth],
+  });
+
+  const yScale = scaleLinear<number>({
+    domain: [min(data.map(yAccessor)) || 0, max(data.map(yAccessor)) || 0],
+    range: [innerHeight, 0],
+  });
+
+  return (
+    <Zoom width={width} height={height} scaleXMax={40} scaleYMax={40}>
+      {(zoom) => {
+        const xScaleTransformed = rescaleX(xScale, zoom);
+        const yScaleTransformed = rescaleY(yScale, zoom);
+
+        return (
+          <svg width={width} height={height} ref={zoom.containerRef}>
+            <RectClipPath
+              id="zoom-clip"
+              width={innerWidth}
+              height={innerHeight}
+            />
+            <Group top={margin.top} left={margin.left}>
+              <rect
+                width={innerWidth}
+                height={innerHeight}
+                fill="transparent"
+              />
+              <Group clipPath="url(#zoom-clip)">
+                <Group>
+                  {data.map((d) => (
+                    <Circle
+                      cx={xScaleTransformed(xAccessor(d))}
+                      cy={yScaleTransformed(yAccessor(d))}
+                      r={7}
+                      fill="yellow"
+                      opacity={0.3}
+                    />
+                  ))}
+                </Group>
+              </Group>
+              <AxisBottom
+                top={innerHeight}
+                scale={xScaleTransformed}
+                stroke="lightGray"
+              />
+              <AxisLeft scale={yScaleTransformed} stroke="lightGray" />
+            </Group>
+          </svg>
+        );
+      }}
+    </Zoom>
+  );
+};
+
+export default ScatterChart;
