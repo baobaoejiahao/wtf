@@ -1,0 +1,182 @@
+[
+    {
+        "event": "Germany Invades France",
+        "start_date": "1940-05-09",
+        "end_date": "1940-06-22"
+    },
+    {
+        "event": "Pearl Harbor",
+        "start_date": "1941-12-06",
+        "end_date": "1941-12-10"
+    },
+    {
+        "event": "Korean War",
+        "start_date": "1950-06-23",
+        "end_date": "1950-07-13"
+    },
+    {
+        "event": "Suez Canal Crisis",
+        "start_date": "1956-10-30",
+        "end_date": "1956-10-31"
+    },
+    {
+        "event": "Sputnik",
+        "start_date": "1957-10-03",
+        "end_date": "1957-10-22"
+    },
+    {
+        "event": "Cuban Missile Crisis",
+        "start_date": "1962-10-19",
+        "end_date": "1962-10-27"
+    },
+    {
+        "event": "JFK Assassinated",
+        "start_date": "1963-11-21",
+        "end_date": "1963-11-22"
+    },
+    {
+        "event": "Martin Luther King Assassinated",
+        "start_date": "1968-04-03",
+        "end_date": "1968-04-05"
+    },
+    {
+        "event": "U.S. Bombs Cambodia",
+        "start_date": "1970-04-29",
+        "end_date": "1970-05-14"
+    },
+    {
+        "event": "Arab Oil Embargo",
+        "start_date": "1973-10-16",
+        "end_date": "1973-12-05"
+    },
+    {
+        "event": "Nixon Resigns",
+        "start_date": "1974-08-07",
+        "end_date": "1974-08-29"
+    },
+    {
+        "event": "Iranian Hostage Crisis",
+        "start_date": "1979-11-02",
+        "end_date": "1979-11-07"
+    },
+    {
+        "event": "U.S.S.R. Invades Afghanistan",
+        "start_date": "1979-12-24",
+        "end_date": "1980-01-03"
+    },
+    {
+        "event": "Falkland Islands War",
+        "start_date": "1982-04-01",
+        "end_date": "1982-05-07"
+    },
+    {
+        "event": "Beirut Bombing",
+        "start_date": "1983-10-21",
+        "end_date": "1983-10-23"
+    },
+    {
+        "event": "U.S. Invades Grenada",
+        "start_date": "1983-10-24",
+        "end_date": "1983-11-07"
+    },
+    {
+        "event": "U.S. Bombs Libya",
+        "start_date": "1986-04-14",
+        "end_date": "1986-04-21"
+    },
+    {
+        "event": "Invasion of Panama",
+        "start_date": "1989-12-15",
+        "end_date": "1989-12-20"
+    },
+    {
+        "event": "Iraq Invades Kuwait",
+        "start_date": "1990-08-02",
+        "end_date": "1990-08-23"
+    },
+    {
+        "event": "Gulf War",
+        "start_date": "1991-01-16",
+        "end_date": "1991-01-17"
+    },
+    {
+        "event": "Gorbachev Coup",
+        "start_date": "1991-08-16",
+        "end_date": "1991-08-19"
+    },
+    {
+        "event": "World Trade Center Bombing",
+        "start_date": "1993-02-25",
+        "end_date": "1993-02-27"
+    },
+    {
+        "event": "Oklahoma City Bombing",
+        "start_date": "1995-04-18",
+        "end_date": "1995-04-20"
+    },
+    {
+        "event": "U.S. Embassy Bombings in Africa",
+        "start_date": "1998-08-06",
+        "end_date": "1998-08-14"
+    },
+    {
+        "event": "U.S.S. Cole Yemen Bombing",
+        "start_date": "2000-10-11",
+        "end_date": "2000-10-18"
+    },
+    {
+        "event": "WTC and Pentagon Terrorist Attacks",
+        "start_date": "2001-09-10",
+        "end_date": "2001-09-21"
+    },
+    {
+        "event": "War in Afghanistan",
+        "start_date": "2001-10-05",
+        "end_date": "2001-10-09"
+    },
+    {
+        "event": "Iraq War",
+        "start_date": "2003-03-19",
+        "end_date": "2003-05-01"
+    },
+    {
+        "event": "Madrid Terrorist Attacks",
+        "start_date": "2004-03-10",
+        "end_date": "2004-03-24"
+    },
+    {
+        "event": "London Train Bombing",
+        "start_date": "2005-07-06",
+        "end_date": "2005-07-07"
+    },
+    {
+        "event": "India, Israel and Lebanon Bombings",
+        "start_date": "2006-07-11",
+        "end_date": "2006-07-18"
+    },
+    {
+        "event": "Russia Invades Georgia",
+        "start_date": "2008-08-08",
+        "end_date": "2008-08-16"
+    },
+    {
+        "event": "Israel Invades Gaza",
+        "start_date": "2008-12-27",
+        "end_date": "2009-01-21"
+    },
+    {
+        "event": "Russia Invades Crimea",
+        "start_date": "2014-03-07",
+        "end_date": "2014-03-14"
+    },
+    {
+        "event": "U.K. Votes to Leave E.U.",
+        "start_date": "2016-06-23",
+        "end_date": "2016-06-27"
+    },
+    {
+        "event": "Russia Invades Ukraine",
+        "start_date": "2022-02-09",
+        "end_date": "2022-03-08"
+    }
+]
